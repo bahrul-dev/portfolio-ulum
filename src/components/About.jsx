@@ -72,7 +72,7 @@ const About = () => {
             <p className="text-slate-200 text-lg font-light leading-relaxed border-l-2 border-white/10 pl-8 relative">
               {/* FIXED: Changed left-[-2px] to -left-0.5 as suggested by Tailwind v4 lint */}
               <span className="absolute -left-0.5 top-0 h-10 w-0.5 bg-cyan-400 shadow-[0_0_8px_#00f0ff]"></span>
-              I bridge the gap between software engineering and business analysis. My core focus is <strong className="text-white font-black">designing autonomous data automation infrastructures</strong> that eliminate repetitive, manual bottlenecks. I do not merely write scripts—I build structured data pipelines that convert chaotic web environments into precise, clean data ready for management, accelerating operational execution and <strong className="text-[#00ffcc] font-bold">optimizing cost efficiency</strong>.
+              I bridge the gap between software engineering and business analysis. My core focus is <strong className="text-white font-black">designing autonomous data automation infrastructures</strong> that eliminate repetitive, manual bottlenecks. I do not merely write scripts - I build structured data pipelines that convert chaotic web environments into precise, clean data ready for management, accelerating operational execution and <strong className="text-[#00ffcc] font-bold">optimizing cost efficiency</strong>.
             </p>
           </div>
         </div>
