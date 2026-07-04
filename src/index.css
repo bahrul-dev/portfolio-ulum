@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* Tambahkan ini agar transisi scroll saat menu diklik menjadi sangat halus */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000000; /* Ubah dari #030712 menjadi #000000 murni */
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: #f8fafc;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}

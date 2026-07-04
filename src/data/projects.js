@@ -1,0 +1,201 @@
+const allImages = import.meta.glob('../assets/projects/**/*.{png,jpg,jpeg,webp}', { eager: true });
+const img = (path) => allImages[`../assets/projects/${path}`]?.default;
+
+export const projectsData = [
+  {
+    id: "tander-intelligence-dashboard",
+    title: "Tander - Intelligence Dashboard",
+    category: "Scraping & Mining",
+    shortDesc: "Real-time government procurement scraper (LPSE) with multi-channel alerts across all Indonesian regions.",
+    fullDesc: "Tander is an automated intelligence tool that scrapes government tender data (LPSE) across multiple provinces in Indonesia. It parses complex HTML tables, normalizes the data into Pandas dataframes, filters by keyword and budget threshold, and pushes real-time Telegram & Email notifications the moment a matching tender is published.",
+    tech: ["Python", "Selenium", "React", "Pandas"],
+    demoLink: "#",
+    githubLink: "#",
+    features: [
+      "Scrapes LPSE portals across all Indonesian provinces automatically",
+      "Real-time Telegram & Email alert system for new matching tenders",
+      "Keyword and budget-range filtering engine",
+      "React dashboard with live data tables and export to Excel",
+      "Scheduled cron jobs with auto-retry on failure",
+    ],
+    images: [
+      img('tander/tander-1.png'),   // ✅ hanya 1 file yang ada
+    ],
+  },
+  {
+    id: "situs-akademik-ecosystem",
+    title: "SitusAkademik Ecosystem",
+    category: "Full-Stack Apps",
+    shortDesc: "AI-powered academic platform automating university assignments, paper generation, and QRIS payments.",
+    fullDesc: "SitusAkademik is a comprehensive academic platform designed to help university students. It features automated study material generation, document paraphrasing, AI-driven academic discussions, and a QRIS payment gateway. Built with a FastAPI backend, React frontend, PostgreSQL database, and Redis caching layer.",
+    tech: ["FastAPI", "React", "PostgreSQL", "Redis"],
+    demoLink: "#",
+    githubLink: "#",
+    features: [
+      "AI-generated essays, papers, and assignments on demand",
+      "QRIS payment gateway integration with auto top-up wallet",
+      "Redis-cached responses for sub-second delivery",
+      "Multi-user dashboard with order history and credit system",
+      "Plagiarism-safe rewriter and citation formatter",
+    ],
+    images: [
+      img('situsademik/situsakademik-1.png'),  // ✅ folder: situsademik, file: situsakademik
+      img('situsademik/situsakademik-2.png'),
+      { type: 'youtube', url: 'https://www.youtube.com/embed/Oj16HYrJVQM', label: 'Demo SitusAkademik' },
+    ],
+  },
+  {
+    id: "talentscan-hr-automation",
+    title: "TalentScan HR Automation",
+    category: "AI & Automation",
+    shortDesc: "End-to-end recruitment pipeline that parses CVs from Gmail and scores candidates with AI.",
+    fullDesc: "TalentScan connects directly to Gmail via IMAP, auto-fetches incoming CV attachments, extracts structured data (skills, experience, education), then ranks candidates against the job description using an AI scoring model.",
+    tech: ["Python", "FastAPI", "AI API", "React"],
+    demoLink: "#",
+    githubLink: "#",
+    features: [
+      "IMAP Gmail integration — fetches CV attachments automatically",
+      "AI-powered candidate scoring against job description",
+      "Structured data extraction from PDF and DOCX CVs",
+      "React HR dashboard with ranking, filters, and notes",
+      "Bulk export of shortlisted candidates to Excel",
+    ],
+    images: [
+      img('talentscan/talentscan-1.png'),  // ✅ semua 5 file
+      img('talentscan/talentscan-2.png'),
+      img('talentscan/talentscan-3.png'),
+      img('talentscan/talentscan-4.png'),
+      img('talentscan/talentscan-5.png'),
+      { type: 'youtube', url: 'https://www.youtube.com/embed/D0jJyVjeXG8', label: 'Demo TalentScan' },
+    ],
+  },
+  {
+    id: "rbv-scraper-downloader-ocr",
+    title: "RBV Clean - Scraper, Downloader & Auto-OCR",
+    category: "Scraping & Mining",
+    shortDesc: "Downloads documents page-by-page from an online reader portal, removes watermarks, and auto-runs OCR.",
+    fullDesc: "RBV Clean logs into an online document reader portal using a session cookie, downloads each page image of the requested documents, then uses OpenCV to remove the watermark overlay and bottom navigation bar unique to that portal's viewer. Cleaned pages are merged into per-document and full combined PDFs, with an optional one-click automatic OCR pass right after downloading finishes.",
+    tech: ["Python", "OpenCV", "CustomTkinter", "ocrmypdf", "Requests"],
+    demoLink: "#",
+    githubLink: "#",
+    features: [
+      "Session-cookie based downloader for paginated document portals",
+      "OpenCV watermark & bottom-bar removal tuned per page pattern",
+      "Multi-process image cleaning for faster batch downloads",
+      "Auto-merges cleaned pages into per-document and full combined PDFs",
+      "Optional one-click automatic OCR pass after download completes",
+      "Live progress log with manual OCR trigger and stop/resume controls",
+    ],
+    images: [
+      img('rbv/rbv-1.png'),   // ✅ hanya 1 file yang ada
+      { type: 'youtube', url: 'https://www.youtube.com/embed/H5U74-fMA4o', label: 'Demo Scraping PDF' },
+    ],
+  },
+  {
+    id: "pdf-to-excel-converter",
+    title: "PDF to Excel Converter",
+    category: "OCR & Data",
+    shortDesc: "Desktop app that batch-converts PDFs into structured, styled Excel files using a 3-layer accuracy pipeline.",
+    fullDesc: "PDF to Excel Converter is a desktop app that turns any batch of PDFs into clean Excel spreadsheets. It automatically picks the right extraction strategy per page: pdfplumber for digital, text-based PDFs; Tesseract OCR for scanned or photographed pages; and an optional Claude AI correction pass that restructures messy OCR text into a clean JSON table. Results are written into a styled, per-file Excel sheet with a summary tab.",
+    tech: ["Python", "pdfplumber", "Tesseract OCR", "Claude AI API", "OpenPyXL"],
+    demoLink: "#",
+    githubLink: "#",
+    features: [
+      "3-layer accuracy strategy: digital text extraction, OCR fallback, AI correction",
+      "Batch processes multiple PDFs with live per-file status cards",
+      "AI pass restructures messy OCR text into clean JSON tables",
+      "Auto-generated summary sheet with success/fail counts and total rows",
+      "Styled Excel output: colored headers, striped rows, auto column width",
+      "One-click open output file and reset for a new batch",
+    ],
+    images: [
+        img('pdfexcel/PDF-EXCEL-1.png'),
+      { type: 'youtube', url: 'https://www.youtube.com/embed/m29mhKpGyck', label: 'Demo PDF to Excel Converter' },
+    ],
+  },
+  {
+    id: "pdf-ocr-tool",
+    title: "PDF OCR Tool",
+    category: "OCR & Data",
+    shortDesc: "Standalone desktop app for batch OCR-ing any folder of PDFs, with deskew, language, and merge options.",
+    fullDesc: "A standalone desktop GUI tool that adds a searchable text layer to PDFs using ocrmypdf and Tesseract. It batch-processes entire folders, automatically deskews scanned pages, supports multiple language packs (Indonesian, English, Arabic, or combinations), lets users pick Tesseract engine modes for different document types, and merges every OCR'd file in a folder into one combined PDF.",
+    tech: ["Python", "CustomTkinter", "ocrmypdf", "Tesseract"],
+    demoLink: "#",
+    githubLink: "#",
+    features: [
+      "Batch OCR processing for entire folders of PDFs",
+      "Automatic deskew and layout-aware text recognition",
+      "Multi-language support (Indonesian, English, Arabic, and combinations)",
+      "Configurable Tesseract OEM/PSM modes for different document types",
+      "Auto-merges all OCR'd files per folder into one combined PDF",
+      "Live progress tracking with pause/stop controls and dependency checker",
+    ],
+    images: [
+        img('ocr/OCR-1.png'),
+    ],  // ⚠️ belum ada gambar/video khusus tools ini
+  },
+  {
+    id: "sipela-educational-platform",
+    title: "Si Pela Educational Platform",
+    category: "Full-Stack Apps",
+    shortDesc: "Automates teacher lesson plans (RPP) and school admin documents from basic curriculum inputs.",
+    fullDesc: "Si Pela automates the creation of teacher lesson plans (RPP) and school administration documents. Teachers input subject, grade level, and topic — the platform generates a complete Kemendikbud-compliant RPP in seconds including learning objectives, teaching methods, and assessment rubrics.",
+    tech: ["React", "Vite", "FastAPI", "PostgreSQL"],
+    demoLink: "#",
+    githubLink: "#",
+    features: [
+      "AI-generated RPP compliant with Kurikulum Merdeka standards",
+      "Covers all subjects and grade levels (SD, SMP, SMA)",
+      "Exports to formatted Word (.docx) and PDF documents",
+      "School admin panel for managing teachers and documents",
+      "Bulk generation mode for full-semester lesson plans",
+    ],
+    images: [
+      { type: 'youtube', url: 'https://www.youtube.com/embed/z1zKwNKWkRQ', label: 'Demo Si Pela' },
+    ],  // TODO: tambah screenshot ke src/assets/projects/sipela/ kalau ada
+  },
+  {
+    id: "crm-universal-importer",
+    title: "CRM Universal Importer",
+    category: "AI & Automation",
+    shortDesc: "Desktop GUI wizard for auto-mapping and bulk importing contact data into HubSpot, Airtable, and Salesforce.",
+    fullDesc: "CRM Universal Importer is a desktop GUI wizard built with Python and Tkinter. Users drag-and-drop any CSV or Excel file — the tool auto-detects column types, suggests field mappings to the target CRM, flags duplicates, and pushes clean records via REST API in batches.",
+    tech: ["Python", "Tkinter", "Pandas", "REST APIs"],
+    demoLink: "#",
+    githubLink: "#",
+    features: [
+      "Drag-and-drop CSV/Excel import with auto column detection",
+      "Smart field mapping suggestions for HubSpot, Airtable, Salesforce",
+      "Duplicate detection and merge logic before upload",
+      "Batch API upload with progress bar and error log",
+      "Supports custom field mapping profiles saved per CRM",
+    ],
+    images: [
+      img('crm-importer/crm-importer-1.png'),  // ✅ semua 4 file
+      img('crm-importer/crm-importer-2.png'),
+      img('crm-importer/crm-importer-3.png'),
+      img('crm-importer/crm-importer-4.png'),
+      { type: 'youtube', url: 'https://www.youtube.com/embed/Jgx5IIadsNc', label: 'Demo CRM Data Entry' },
+    ],
+  },
+  {
+    id: "data-clean-automation",
+    title: "DataClean Pro - Data Cleaning & Deduplication Tool",
+    category: "OCR & Data",
+    shortDesc: "Streamlit dashboard that scans, cleans, and exports messy datasets with a visual before/after quality report.",
+    fullDesc: "DataClean Pro is a Streamlit-based data cleaning dashboard. It scans uploaded datasets for null-like values, exact and near-duplicate rows, inconsistent text casing, invalid phone formats, outlier ages, and mixed date formats, then runs a configurable cleaning pipeline and exports the result to CSV or Excel alongside the original data — plus an interactive before/after data quality report.",
+    tech: ["Python", "Streamlit", "Pandas", "Plotly"],
+    demoLink: "#",
+    githubLink: "#",
+    features: [
+      "Automated issue detection: missing values, duplicates, casing, phone/date/age anomalies",
+      "Configurable cleaning pipeline (casing fix, dedup, fill missing, format fixes)",
+      "Before/after row count comparison with a detailed cleaning log",
+      "Exports cleaned data to CSV or Excel, original data preserved on a separate sheet",
+      "Interactive visual data-quality report with Plotly charts",
+    ],
+    images: [
+      { type: 'youtube', url: 'https://www.youtube.com/embed/hX-6fzUQEDw', label: 'Demo DataClean Pro' },
+    ],
+  },
+];
