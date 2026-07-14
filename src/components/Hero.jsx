@@ -163,7 +163,7 @@ const Hero = () => {
 
           {/* CALL TO ACTIONS */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-start gap-4">
-            <a href="https://www.linkedin.com/in/mukhamad-bahrul-ulum/" target="_blank" rel="noopener noreferrer" className="px-8 py-4 w-full sm:w-auto rounded-xl bg-linear-to-r from-[#00ffcc] via-[#00f0ff] to-[#3b82f6] text-slate-950 font-black text-lg text-center hover:scale-[1.03] transition-all shadow-[0_0_35px_rgba(0,240,255,0.4)] tracking-wide">
+            <a href="mailto:ulumarbalas6@gmail.com" className="px-8 py-4 w-full sm:w-auto rounded-xl bg-linear-to-r from-[#00ffcc] via-[#00f0ff] to-[#3b82f6] text-slate-950 font-black text-lg text-center hover:scale-[1.03] transition-all shadow-[0_0_35px_rgba(0,240,255,0.4)] tracking-wide">
               Build My Pipeline
             </a>
             <a href="/CV_Mukhamad_Bahrul_Ulum.pdf" download="CV_Mukhamad_Bahrul_Ulum.pdf" className="px-8 py-4 w-full sm:w-auto rounded-xl bg-slate-950 border border-white/20 text-white font-bold text-lg text-center backdrop-blur-sm hover:bg-slate-900 transition-all flex items-center justify-center gap-2">
