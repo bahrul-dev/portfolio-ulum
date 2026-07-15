@@ -97,9 +97,9 @@ const Contact = () => {
           <p className="font-bold">© 2026 Mukhamad Bahrul Ulum. All rights reserved.</p>
           
           <div className="flex items-center gap-6 font-black text-[11px]">
-            <a href="https://www.linkedin.com/in/eli-arbalas-11335041b" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#00f0ff] transition-colors">LINKEDIN</a>
-            <a href="#" className="text-slate-400 hover:text-[#00ffcc] transition-colors">UPWORK</a>
-            <a href="#" className="text-slate-400 hover:text-[#3b82f6] transition-colors">GITHUB</a>
+            <a href="https://www.linkedin.com/in/mukhamad-bahrul-ulum/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#00f0ff] transition-colors">LINKEDIN</a>
+            <a href="https://www.upwork.com/freelancers/~0110b32e81ea9c1e4c?mp_source=share" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#00ffcc] transition-colors">UPWORK</a>
+            <a href="https://github.com/bahrul-dev" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#3b82f6] transition-colors">GITHUB</a>
           </div>
         </motion.div>
 
